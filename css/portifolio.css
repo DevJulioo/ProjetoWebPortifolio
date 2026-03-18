@@ -13,7 +13,7 @@ body {
 
 /* --- NAVBAR --- */
 .navbar {
-  background-color: black;
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -21,6 +21,15 @@ body {
   height: 80px;
   display: flex;
   justify-content: center;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolling {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid black;
 }
 
 .navbar ul {
@@ -33,7 +42,7 @@ body {
 }
 
 .nav-logo {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .nav-logo a {
@@ -43,7 +52,7 @@ body {
 
 .navbar li a {
   text-decoration: none;
-  color: white;
+  color: black;
   padding: 10px 15px;
   transition: 0.3s;
 }
